@@ -1,0 +1,4 @@
+"scripts": {
+    "test": "jest --coverage",1
+    "test:watch": "jest --watch",2
+    "test:ci": "jest --ci --coverage --runInBand"3
