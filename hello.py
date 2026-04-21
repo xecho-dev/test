@@ -1,7 +1,9 @@
-result = chat_model.invoke(messages)
+def process_chat_response(messages):
+    result = chat_model.invoke(messages)
+    parser = StrOutputParser()
+    response = parser.invoke(result)
+    return response
 
-parser = StrOutputParser()
-#使用parser处理model返回的结果
-response = parser.invoke(result)
+response = process_chat_response(messages)
 print(type(response))
 print(response)
